@@ -148,9 +148,8 @@ cv.biglasso <- function(X, y, row.idx = 1:nrow(X),
                             envir=environment())
     parallel::clusterCall(cluster, function() {
       
-      require(bigmemory)
       require(biglasso)
-      # require(bigmemory)
+      require(bigmemory)
       # require(Matrix)
       # dyn.load("~/GitHub/biglasso.Rcheck/biglasso/libs/biglasso.so")
       # source("~/GitHub/biglasso/R/biglasso.R")
