@@ -147,7 +147,8 @@ cv.biglasso <- function(X, y, row.idx = 1:nrow(X),
                                        "parallel", "eval.metric"),
                             envir=environment())
     parallel::clusterCall(cluster, function() {
-
+      
+      require(bigmemory)
       require(biglasso)
       # require(bigmemory)
       # require(Matrix)
